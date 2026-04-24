@@ -284,18 +284,19 @@
                 <p>&copy; 2026 Zizhao Chen. All rights reserved.</p>
                 <p class="mt-1 text-xs">Based on Academic Portfolio Theme. Built with HTML & Tailwind CSS.</p>
 
+                <!-- 新增：页面访问量统计徽章 (Page Views Badge) -->
+                <!-- 替换为兼容个人网站的 Hits 统计服务，保留了完全相同的视觉样式 (颜色、扁平化等) -->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 <div class="flex justify-center mt-2">
-                    <img id="page-views-counter" alt="Page Views" style="height: 20px;">
+                    <div class="flex items-stretch text-[11px] font-bold text-white tracking-wider shadow-sm" style="font-family: Verdana, sans-serif;">
+                        <div class="bg-[#555555] px-2 py-1 flex items-center">Page Views</div>
+                        <div class="bg-[#3eaf7c] px-2 py-1 flex items-center min-w-[30px] justify-center">
+                            <span id="busuanzi_container_site_pv" style="display:none;">
+                                <span id="busuanzi_value_site_pv">...</span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                
-                <script>
-                    // 获取 img 标签
-                    const counterImg = document.getElementById('page-views-counter');
-                    // 生成当前的时间戳，用于破除浏览器对图片的缓存
-                    const timestamp = new Date().getTime();
-                    // 这里顺便将原代码的 bigD233-github 修正为了注释中期望的 bigD233-portfolio
-                    counterImg.src = `https://komarev.com/ghpvc/?username=bigD233&label=Page%20Views&color=3eaf7c&style=flat-square&t=${timestamp}`;
-                </script>
             </footer>
 
         </main>
